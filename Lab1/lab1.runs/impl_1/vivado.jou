@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Jan 19 23:36:10 2023
+# Process ID: 14540
+# Current directory: D:/TAMU/Spring23/ECEN449/Lab/Lab1/lab1.runs/impl_1
+# Command line: vivado.exe -log switch.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source switch.tcl -notrace
+# Log file: D:/TAMU/Spring23/ECEN449/Lab/Lab1/lab1.runs/impl_1/switch.vdi
+# Journal file: D:/TAMU/Spring23/ECEN449/Lab/Lab1/lab1.runs/impl_1\vivado.jou
+# Running On: DESKTOP-AEN7PND, OS: Windows, CPU Frequency: 1896 MHz, CPU Physical cores: 16, Host memory: 33099 MB
+#-----------------------------------------------------------
+source switch.tcl -notrace
