@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/TAMU/Spring23/ECEN449/Lab/Lab1/lab1.runs/impl_1/switch.tcl"
+  variable script "D:/TAMU/Spring23/ECEN449/Lab1/lab1.runs/impl_1/switch.tcl"
   variable category "vivado_impl"
 }
 
@@ -122,22 +122,23 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 4
+  set_param chipscope.maxJobs 5
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z010clg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/TAMU/Spring23/ECEN449/Lab/Lab1/lab1.cache/wt [current_project]
-  set_property parent.project_path D:/TAMU/Spring23/ECEN449/Lab/Lab1/lab1.xpr [current_project]
-  set_property ip_output_repo D:/TAMU/Spring23/ECEN449/Lab/Lab1/lab1.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/TAMU/Spring23/ECEN449/Lab1/lab1.cache/wt [current_project]
+  set_property parent.project_path D:/TAMU/Spring23/ECEN449/Lab1/lab1.xpr [current_project]
+  set_property ip_output_repo D:/TAMU/Spring23/ECEN449/Lab1/lab1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/TAMU/Spring23/ECEN449/Lab/Lab1/lab1.runs/synth_1/switch.dcp
+  add_files -quiet D:/TAMU/Spring23/ECEN449/Lab1/lab1.runs/synth_1/switch.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/TAMU/Spring23/ECEN449/Lab/Lab1/lab1.srcs/constrs_1/new/switch.xdc
+  read_xdc D:/TAMU/Spring23/ECEN449/Lab1/lab1.srcs/constrs_1/new/switch.xdc
+  read_xdc D:/TAMU/Spring23/ECEN449/Lab1/lab1.srcs/constrs_1/new/four_bit_counter.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
@@ -280,10 +281,10 @@ OPTRACE "route_design reports" START { REPORT }
 OPTRACE "route_design reports" END { }
 OPTRACE "route_design misc" START { }
   close_msg_db -file route_design.pb
-OPTRACE "route_design write_checkpoint" START { CHECKPOINT }
-OPTRACE "route_design write_checkpoint" END { }
 } RESULT]
 if {$rc} {
+OPTRACE "route_design write_checkpoint" START { CHECKPOINT }
+OPTRACE "route_design write_checkpoint" END { }
   write_checkpoint -force switch_routed_error.dcp
   step_failed route_design
   return -code error $RESULT
