@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/sources_1/new/four_bit_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module four_bit_counter
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/sim_1/new/four_bit_counter_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module four_bit_counter_tb

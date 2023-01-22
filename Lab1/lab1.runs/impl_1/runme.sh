@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/TAMU/Spring23/ECEN449/Lab1/lab1.runs/impl_1'
+HD_PWD='D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
-EAStep vivado -log switch.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source switch.tcl -notrace
+/bin/touch .init_design.begin.rst
+EAStep vivado -log jackpot.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source jackpot.tcl -notrace
 
 
