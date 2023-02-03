@@ -1,1 +1,16 @@
 Time resolution is 1 ps
+time=                   0, Rst=1, switches=0000, leds=0001
+time=               10000, Rst=0, switches=0000, leds=0001
+time=               20000, Rst=0, switches=0000, leds=0010
+time=               60000, Rst=0, switches=0000, leds=0100
+time=              100000, Rst=0, switches=0000, leds=1000
+time=              140000, Rst=0, switches=0000, leds=0001
+time=              180000, Rst=0, switches=0010, leds=0010
+time=              220000, Rst=0, switches=0010, leds=1111
+time=              280000, Rst=1, switches=0010, leds=1111
+time=              300000, Rst=1, switches=0010, leds=0001
+time=              380000, Rst=0, switches=0010, leds=0010
+time=              420000, Rst=0, switches=0010, leds=0100
+time=              460000, Rst=0, switches=1000, leds=1000
+time=              500000, Rst=0, switches=1000, leds=1111
+$finish called at time : 960 us : File "D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/sim_1/new/jackpot_tb.v" Line 63

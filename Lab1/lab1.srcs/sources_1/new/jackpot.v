@@ -1,63 +1,74 @@
 `timescale 1ns / 1ps
 
+//module jackpot(LEDS, Clk, SWITCHES, Rst, pe_switch, edg_dect, sum_switch, SlowClk);
 module jackpot(LEDS, Clk, SWITCHES, Rst);
-    
+
     // Declare inputs,output
     output wire [3:0] LEDS;
     input wire [3:0] SWITCHES;
     input wire Clk;
     input wire Rst;
     
-    reg [3:0] Counter;
-    wire ClkOut;
+    wire [3:0] pe;
+    wire [3:0] pe_switch;
+    wire edg_dect;
+    wire sum_switch;   
+    wire SlowClk;
     
+    reg [3:0] currentState;
+    reg [3:0] nextState;
     
-    initial Counter = 4'b0000;
+    clock_divider cd2(.ClkOut(SlowClk), .ClkIn(Clk)); 
+        
+    assign sum_switch = SWITCHES[0] | SWITCHES[1] | SWITCHES[2] | SWITCHES[3]; 
     
-    clock_divider unit0(ClkOut, Clk); 
+    initial currentState = 4'b0001; 
     
-    always@(posedge ClkOut) begin
-        if (Rst) begin
-            Counter <= 4'b0000;
-        end
-        else begin
-            if (SWITCHES[0] || SWITCHES[1] || SWITCHES[2] || SWITCHES[3]) begin
-                if(SWITCHES == Counter && Counter != 4'b0000) begin
-                    Counter <= 4'b1111;
-                end
-                else begin
-                    Counter <= Counter;
-                end
-            end
-            else begin
-                case(Counter)
-                    4'b0000 : Counter <= 4'b0001;
-                    4'b0001 : Counter <= 4'b0010;
-                    4'b0010 : Counter <= 4'b0100;
-                    4'b0100 : Counter <= 4'b1000;
-                    4'b1000 : Counter <= 4'b0001;
-                endcase
-            end
-        end
+    always@(posedge Clk) begin
+        if (Rst) 
+            currentState <= 4'b0001;
+        else 
+           case(currentState)
+                4'b0001 :
+                    if (pe_switch[0])
+                        currentState <= 4'b1111;
+                    else
+                        currentState <= 4'b0010; 
+                4'b0010 :
+                    if (pe_switch[1])
+                        currentState <= 4'b1111;
+                    else
+                        currentState <= 4'b0100;
+                4'b0100 :
+                    if (pe_switch[2])
+                        currentState <= 4'b1111;
+                    else
+                        currentState <= 4'b1000;
+                4'b1000 :
+                    if (pe_switch[3])
+                        currentState <= 4'b1111;
+                    else
+                        currentState <= 4'b0001;
+                4'b1111 :
+                    if (sum_switch) 
+                        currentState <= 4'b1111;
+                    else 
+                        currentState <= 4'b0001;
+            endcase
     end 
-   
+     
     
-    assign LEDS = Counter;    
+    edge_dectector edge0(SWITCHES[0], Clk, pe_switch[0]);
+    edge_dectector edge1(SWITCHES[1], Clk, pe_switch[1]);
+    edge_dectector edge2(SWITCHES[2], Clk, pe_switch[2]);
+    edge_dectector edge3(SWITCHES[3], Clk, pe_switch[3]);
+
+    
+    assign edg_dect = pe_switch[0] || pe_switch[1] || pe_switch[2] || pe_switch[3];
+    
+    assign LEDS = currentState;    
     
 endmodule
 
-module clock_divider(ClkOut, ClkIn);
 
-    output wire ClkOut;
-    input wire ClkIn;
-    
-
-     parameter n = 25;
-     
-     reg [n:0] Count; 
-     
-     always@(posedge ClkIn)
-        Count <= Count + 1;
-     
-        assign ClkOut = Count[n];
-endmodule
+ 

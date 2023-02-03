@@ -31,18 +31,3 @@ module four_bit_counter(LEDS, Clk, BTN);
     assign LEDS = Count;
 
 endmodule
-
-module clock_divider(ClkOut, ClkIn);
-
-    output wire ClkOut;
-    input wire ClkIn;
-    
-     parameter n = 26;
-     
-     reg [n:0] Count; 
-     
-     always@(posedge ClkIn)
-        Count <= Count + 1;
-     
-        assign ClkOut = Count[n];
-endmodule

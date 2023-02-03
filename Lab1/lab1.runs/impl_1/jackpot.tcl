@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.runs/impl_1/switch.tcl"
+  variable script "D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.runs/impl_1/jackpot.tcl"
   variable category "vivado_impl"
 }
 
@@ -136,7 +136,7 @@ OPTRACE "set parameters" START { }
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.runs/synth_1/switch.dcp
+  add_files -quiet D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.runs/synth_1/jackpot.dcp
 OPTRACE "read constraints: implementation" START { }
   read_xdc D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/constrs_1/new/switch.xdc
   read_xdc D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/constrs_1/new/four_bit_counter.xdc
@@ -144,7 +144,7 @@ OPTRACE "read constraints: implementation" START { }
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
-  link_design -top switch -part xc7z010clg400-1 
+  link_design -top jackpot -part xc7z010clg400-1 
 OPTRACE "link_design" END { }
 OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }
@@ -176,10 +176,10 @@ OPTRACE "opt_design" END { }
 OPTRACE "read constraints: opt_design_post" START { }
 OPTRACE "read constraints: opt_design_post" END { }
 OPTRACE "Opt Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force switch_opt.dcp
+  write_checkpoint -force jackpot_opt.dcp
 OPTRACE "Opt Design: write_checkpoint" END { }
 OPTRACE "opt_design reports" START { REPORT }
-  create_report "impl_1_opt_report_drc_0" "report_drc -file switch_drc_opted.rpt -pb switch_drc_opted.pb -rpx switch_drc_opted.rpx"
+  create_report "impl_1_opt_report_drc_0" "report_drc -file jackpot_drc_opted.rpt -pb jackpot_drc_opted.pb -rpx jackpot_drc_opted.rpx"
 OPTRACE "opt_design reports" END { }
   close_msg_db -file opt_design.pb
 } RESULT]
@@ -210,12 +210,12 @@ OPTRACE "place_design" END { }
 OPTRACE "read constraints: place_design_post" START { }
 OPTRACE "read constraints: place_design_post" END { }
 OPTRACE "Place Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force switch_placed.dcp
+  write_checkpoint -force jackpot_placed.dcp
 OPTRACE "Place Design: write_checkpoint" END { }
 OPTRACE "place_design reports" START { REPORT }
-  create_report "impl_1_place_report_io_0" "report_io -file switch_io_placed.rpt"
-  create_report "impl_1_place_report_utilization_0" "report_utilization -file switch_utilization_placed.rpt -pb switch_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file switch_control_sets_placed.rpt"
+  create_report "impl_1_place_report_io_0" "report_io -file jackpot_io_placed.rpt"
+  create_report "impl_1_place_report_utilization_0" "report_utilization -file jackpot_utilization_placed.rpt -pb jackpot_utilization_placed.pb"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file jackpot_control_sets_placed.rpt"
 OPTRACE "place_design reports" END { }
   close_msg_db -file place_design.pb
 } RESULT]
@@ -241,7 +241,7 @@ OPTRACE "phys_opt_design" END { }
 OPTRACE "read constraints: phys_opt_design_post" START { }
 OPTRACE "read constraints: phys_opt_design_post" END { }
 OPTRACE "Post-Place Phys Opt Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force switch_physopt.dcp
+  write_checkpoint -force jackpot_physopt.dcp
 OPTRACE "Post-Place Phys Opt Design: write_checkpoint" END { }
 OPTRACE "phys_opt_design report" START { REPORT }
 OPTRACE "phys_opt_design report" END { }
@@ -269,17 +269,17 @@ OPTRACE "route_design" END { }
 OPTRACE "read constraints: route_design_post" START { }
 OPTRACE "read constraints: route_design_post" END { }
 OPTRACE "Route Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force switch_routed.dcp
+  write_checkpoint -force jackpot_routed.dcp
 OPTRACE "Route Design: write_checkpoint" END { }
 OPTRACE "route_design reports" START { REPORT }
-  create_report "impl_1_route_report_drc_0" "report_drc -file switch_drc_routed.rpt -pb switch_drc_routed.pb -rpx switch_drc_routed.rpx"
-  create_report "impl_1_route_report_methodology_0" "report_methodology -file switch_methodology_drc_routed.rpt -pb switch_methodology_drc_routed.pb -rpx switch_methodology_drc_routed.rpx"
-  create_report "impl_1_route_report_power_0" "report_power -file switch_power_routed.rpt -pb switch_power_summary_routed.pb -rpx switch_power_routed.rpx"
-  create_report "impl_1_route_report_route_status_0" "report_route_status -file switch_route_status.rpt -pb switch_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -report_unconstrained -file switch_timing_summary_routed.rpt -pb switch_timing_summary_routed.pb -rpx switch_timing_summary_routed.rpx -warn_on_violation "
-  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file switch_incremental_reuse_routed.rpt"
-  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file switch_clock_utilization_routed.rpt"
-  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file switch_bus_skew_routed.rpt -pb switch_bus_skew_routed.pb -rpx switch_bus_skew_routed.rpx"
+  create_report "impl_1_route_report_drc_0" "report_drc -file jackpot_drc_routed.rpt -pb jackpot_drc_routed.pb -rpx jackpot_drc_routed.rpx"
+  create_report "impl_1_route_report_methodology_0" "report_methodology -file jackpot_methodology_drc_routed.rpt -pb jackpot_methodology_drc_routed.pb -rpx jackpot_methodology_drc_routed.rpx"
+  create_report "impl_1_route_report_power_0" "report_power -file jackpot_power_routed.rpt -pb jackpot_power_summary_routed.pb -rpx jackpot_power_routed.rpx"
+  create_report "impl_1_route_report_route_status_0" "report_route_status -file jackpot_route_status.rpt -pb jackpot_route_status.pb"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -report_unconstrained -file jackpot_timing_summary_routed.rpt -pb jackpot_timing_summary_routed.pb -rpx jackpot_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file jackpot_incremental_reuse_routed.rpt"
+  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file jackpot_clock_utilization_routed.rpt"
+  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file jackpot_bus_skew_routed.rpt -pb jackpot_bus_skew_routed.pb -rpx jackpot_bus_skew_routed.rpx"
 OPTRACE "route_design reports" END { }
 OPTRACE "route_design misc" START { }
   close_msg_db -file route_design.pb
@@ -287,7 +287,7 @@ OPTRACE "route_design misc" START { }
 if {$rc} {
 OPTRACE "route_design write_checkpoint" START { CHECKPOINT }
 OPTRACE "route_design write_checkpoint" END { }
-  write_checkpoint -force switch_routed_error.dcp
+  write_checkpoint -force jackpot_routed_error.dcp
   step_failed route_design
   return -code error $RESULT
 } else {
@@ -305,16 +305,16 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  catch { write_mem_info -force -no_partial_mmi switch.mmi }
+  catch { write_mem_info -force -no_partial_mmi jackpot.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
-  write_bitstream -force switch.bit 
+  write_bitstream -force jackpot.bit 
 OPTRACE "write_bitstream" END { }
 OPTRACE "write_bitstream misc" START { }
 OPTRACE "read constraints: write_bitstream_post" START { }
 OPTRACE "read constraints: write_bitstream_post" END { }
-  catch {write_debug_probes -quiet -force switch}
-  catch {file copy -force switch.ltx debug_nets.ltx}
+  catch {write_debug_probes -quiet -force jackpot}
+  catch {file copy -force jackpot.ltx debug_nets.ltx}
   close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {

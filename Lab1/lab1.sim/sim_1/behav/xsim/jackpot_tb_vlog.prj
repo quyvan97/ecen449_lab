@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../lab1.srcs/sources_1/new/clock_divider.v" \
+"../../../../lab1.srcs/sources_1/new/edge_detector.v" \
+"../../../../lab1.srcs/sources_1/new/jackpot.v" \
+"../../../../lab1.srcs/sim_1/new/jackpot_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

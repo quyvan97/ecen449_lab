@@ -3,5 +3,9 @@
 Oct 14 2022
 05:20:55
 D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/sim_1/new/clock_divider_tb.v,1675219382,verilog,,,,clock_divider_tb,,,,,,,,
 D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/sim_1/new/four_bit_counter_tb.v,1674287545,verilog,,,,four_bit_counter_tb,,,,,,,,
-D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/sources_1/new/four_bit_counter.v,1674288551,verilog,,D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/sim_1/new/four_bit_counter_tb.v,,clock_divider;four_bit_counter,,,,,,,,
+D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/sim_1/new/jackpot_tb.v,1675221814,verilog,,,,jackpot_tb,,,,,,,,
+D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/sources_1/new/clock_divider.v,1675220410,verilog,,D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/sources_1/new/edge_detector.v,,clock_divider,,,,,,,,
+D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/sources_1/new/edge_detector.v,1675222750,verilog,,D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/sources_1/new/jackpot.v,,edge_dectector,,,,,,,,
+D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/sources_1/new/jackpot.v,1675220785,verilog,,D:/TAMU/Spring23/ECEN449/ecen449_lab/Lab1/lab1.srcs/sim_1/new/jackpot_tb.v,,jackpot,,,,,,,,

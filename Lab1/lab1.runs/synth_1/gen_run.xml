@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1674572646" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/switch.dcp">
-  <File Type="PA-TCL" Name="switch.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="switch_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="switch_reports.tcl"/>
-  <File Type="RDS-RDS" Name="switch.vds"/>
-  <File Type="RDS-UTIL" Name="switch_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="switch_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="switch.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="switch_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="switch_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1675220424" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/switch.dcp">
+  <File Type="PA-TCL" Name="jackpot.tcl"/>
+  <File Type="REPORTS-TCL" Name="jackpot_reports.tcl"/>
+  <File Type="RDS-RDS" Name="jackpot.vds"/>
+  <File Type="RDS-UTIL" Name="jackpot_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="jackpot_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="jackpot.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/switch.v">
+    <File Path="$PSRCDIR/sources_1/new/clock_divider.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/edge_detector.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -20,7 +24,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/jackpot.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -34,7 +37,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/divide_clock.v">
+    <File Path="$PSRCDIR/sources_1/new/switch.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -44,7 +47,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="switch"/>
+      <Option Name="TopModule" Val="jackpot"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

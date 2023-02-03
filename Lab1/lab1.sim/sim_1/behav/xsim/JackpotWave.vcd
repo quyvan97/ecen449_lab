@@ -1,0 +1,367 @@
+$date
+   Tue Jan 31 21:39:20 2023
+$end
+$version
+  2022.2
+$end
+$timescale
+  1ps
+$end
+$scope module jackpot_tb $end
+$var reg 1 ! Clk $end
+$var reg 1 " Rst $end
+$var reg 4 # switches [3:0] $end
+$var wire 4 $ leds [3:0] $end
+$var wire 4 % pe_switch [3:0] $end
+$var wire 1 & edg_dect $end
+$var wire 1 ' sum_switch $end
+$scope module jkpot01 $end
+$var wire 4 $ LEDS [3:0] $end
+$var wire 4 ( SWITCHES [3:0] $end
+$var wire 1 ) Clk $end
+$var wire 1 * Rst $end
+$var wire 4 % pe_switch [3:0] $end
+$var wire 1 & edg_dect $end
+$var wire 1 ' sum_switch $end
+$var wire 1 + SlowClk $end
+$var reg 4 , currentState [3:0] $end
+$var reg 4 - nextState [3:0] $end
+$scope module cd2 $end
+$var wire 4 . ClkOut [3:0] $end
+$var wire 1 ) ClkIn $end
+$var reg 28 / Count [27:0] $end
+$upscope $end
+$scope module edge0 $end
+$var wire 1 0 Signal $end
+$var wire 1 ) Clk $end
+$var wire 1 1 Pe $end
+$var reg 1 2 delaySignal $end
+$var reg 1 3 delaySignal2 $end
+$var reg 1 4 delaySignal3 $end
+$upscope $end
+$scope module edge1 $end
+$var wire 1 5 Signal $end
+$var wire 1 ) Clk $end
+$var wire 1 6 Pe $end
+$var reg 1 7 delaySignal $end
+$var reg 1 8 delaySignal2 $end
+$var reg 1 9 delaySignal3 $end
+$upscope $end
+$scope module edge2 $end
+$var wire 1 : Signal $end
+$var wire 1 ) Clk $end
+$var wire 1 ; Pe $end
+$var reg 1 < delaySignal $end
+$var reg 1 = delaySignal2 $end
+$var reg 1 > delaySignal3 $end
+$upscope $end
+$scope module edge3 $end
+$var wire 1 ? Signal $end
+$var wire 1 ) Clk $end
+$var wire 1 @ Pe $end
+$var reg 1 A delaySignal $end
+$var reg 1 B delaySignal2 $end
+$var reg 1 C delaySignal3 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+b0 #
+b1 $
+b0 %
+0&
+0'
+b0 (
+0)
+1*
+0+
+b1 ,
+bx -
+b0 .
+b0 /
+00
+01
+02
+x3
+x4
+05
+06
+07
+x8
+x9
+0:
+0;
+0<
+x=
+x>
+0?
+0@
+0A
+xB
+xC
+$end
+#10000000
+0"
+0*
+#20000000
+1!
+b10 $
+b0 %
+1)
+b10 ,
+b1 /
+01
+03
+06
+08
+0;
+0=
+0@
+0B
+#40000000
+0!
+0)
+04
+09
+0>
+0C
+#60000000
+1!
+b100 $
+1)
+b100 ,
+b10 /
+#80000000
+0!
+0)
+#100000000
+1!
+b1000 $
+1)
+b1000 ,
+b11 /
+#120000000
+0!
+0)
+#140000000
+1!
+b1 $
+1)
+b1 ,
+b100 /
+#160000000
+0!
+0)
+#180000000
+1!
+b10 #
+b10 $
+b10 %
+1&
+1'
+b10 (
+1)
+b10 ,
+b101 /
+00
+15
+16
+0:
+0?
+#200000000
+0!
+b10 %
+0)
+16
+17
+#220000000
+1!
+b1111 $
+b0 %
+0&
+1)
+b1111 ,
+b110 /
+06
+18
+#240000000
+0!
+0)
+19
+#260000000
+1!
+1)
+b1111 ,
+b111 /
+#280000000
+0!
+1"
+0)
+1*
+#300000000
+1!
+b1 $
+1)
+b1 ,
+b1000 /
+#320000000
+0!
+0)
+#340000000
+1!
+1)
+b1 ,
+b1001 /
+#360000000
+0!
+0)
+#380000000
+1!
+0"
+b10 $
+1)
+0*
+b10 ,
+b1010 /
+#400000000
+0!
+0)
+#420000000
+1!
+b100 $
+1)
+b100 ,
+b1011 /
+#440000000
+0!
+0)
+#460000000
+1!
+b1000 #
+b1000 $
+b1000 %
+1&
+b1000 (
+1)
+b1000 ,
+b1100 /
+00
+05
+06
+0:
+1?
+1@
+#480000000
+0!
+b1000 %
+0)
+06
+07
+1@
+1A
+#500000000
+1!
+b1111 $
+b0 %
+0&
+1)
+b1111 ,
+b1101 /
+06
+08
+0@
+1B
+#520000000
+0!
+0)
+09
+1C
+#540000000
+1!
+1)
+b1111 ,
+b1110 /
+#560000000
+0!
+0)
+#580000000
+1!
+1)
+b1111 ,
+b1111 /
+#600000000
+0!
+0)
+#620000000
+1!
+1)
+b1111 ,
+b10000 /
+#640000000
+0!
+0)
+#660000000
+1!
+1)
+b1111 ,
+b10001 /
+#680000000
+0!
+0)
+#700000000
+1!
+1)
+b1111 ,
+b10010 /
+#720000000
+0!
+0)
+#740000000
+1!
+1)
+b1111 ,
+b10011 /
+#760000000
+0!
+0)
+#780000000
+1!
+1)
+b1111 ,
+b10100 /
+#800000000
+0!
+0)
+#820000000
+1!
+1)
+b1111 ,
+b10101 /
+#840000000
+0!
+0)
+#860000000
+1!
+1)
+b1111 ,
+b10110 /
+#880000000
+0!
+0)
+#900000000
+1!
+1)
+b1111 ,
+b10111 /
+#920000000
+0!
+0)
+#940000000
+1!
+1)
+b1111 ,
+b11000 /
