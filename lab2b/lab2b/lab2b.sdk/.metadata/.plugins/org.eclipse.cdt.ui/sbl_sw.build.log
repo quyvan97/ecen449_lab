@@ -1,0 +1,21 @@
+23:50:44 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7388	    308	   3120	  10816	   2a40	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+
+23:50:44 Build Finished (took 390ms)
+

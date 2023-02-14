@@ -1,0 +1,1966 @@
+22:45:45 **** Build of project sbl_sw_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+
+**** Build of configuration Debug for project sbl_sw ****
+
+Nothing to build for project sbl_sw
+22:46:34 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b/lab2b.d" -MT"src/lab2b/lab2b.o" -o "src/lab2b/lab2b.o" "../src/lab2b/lab2b.c"
+'Finished building: ../src/lab2b/lab2b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab2b/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:46:42 **** Clean-only build of configuration Debug for project sbl_sw ****
+make clean 
+rm -rf  ./src/lab2b/lab2b.o  ./src/lab2b/lab2b.d  sbl_sw.elf.size  sbl_sw.elf
+' '
+
+****  of configuration Debug for project sbl_sw ****
+
+Nothing to build for project sbl_sw
+22:46:58 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+'Finished building: ../src/lab2b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:47:48 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+'Finished building: ../src/lab2b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:48:18 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+'Finished building: ../src/lab2b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:48:25 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+../src/lab2b.c: In function 'main':
+../src/lab2b.c:24:5: error: 'sb_status' undeclared (first use in this function); did you mean 'led_status'?
+     sb_status = XGpio_Initialize(&switch_buttons, XPAR_GPIO_1_DEVICE_ID);
+     ^~~~~~~~~
+     led_status
+../src/lab2b.c:24:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/lab2b.c:19:22: warning: unused variable 'switch_button_status' [-Wunused-variable]
+     int led_status,  switch_button_status;
+                      ^~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/lab2b.o] Error 1
+22:48:36 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+'Finished building: ../src/lab2b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:48:41 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+../src/lab2b.c: In function 'main':
+../src/lab2b.c:27:29: error: 'switch_buttons' undeclared (first use in this function)
+     XGpio_SetDataDirection(&switch_buttons, 2, 0xFF);
+                             ^~~~~~~~~~~~~~
+../src/lab2b.c:27:29: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/lab2b.o] Error 1
+22:48:46 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+../src/lab2b.c: In function 'main':
+../src/lab2b.c:36:35: error: 'switch_buttons' undeclared (first use in this function)
+      get_bs = XGpio_DiscreteRead(&switch_buttons, 2);
+                                   ^~~~~~~~~~~~~~
+../src/lab2b.c:36:35: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/lab2b.o] Error 1
+22:48:52 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+../src/lab2b.c: In function 'main':
+../src/lab2b.c:36:35: error: 'switch_buttons' undeclared (first use in this function)
+      get_bs = XGpio_DiscreteRead(&switch_buttons, 2);
+                                   ^~~~~~~~~~~~~~
+../src/lab2b.c:36:35: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/lab2b.o] Error 1
+22:48:59 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+../src/lab2b.c: In function 'main':
+../src/lab2b.c:37:35: error: 'switch_buttons' undeclared (first use in this function)
+      get_bs = XGpio_DiscreteRead(&switch_buttons, 2);
+                                   ^~~~~~~~~~~~~~
+../src/lab2b.c:37:35: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/lab2b.o] Error 1
+22:49:02 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+../src/lab2b.c: In function 'main':
+../src/lab2b.c:38:35: error: 'switch_buttons' undeclared (first use in this function)
+      get_bs = XGpio_DiscreteRead(&switch_buttons, 2);
+                                   ^~~~~~~~~~~~~~
+../src/lab2b.c:38:35: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/lab2b.o] Error 1
+22:49:08 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+'Finished building: ../src/lab2b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:49:10 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+'Finished building: ../src/lab2b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:49:34 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+'Finished building: ../src/lab2b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6664	    308	   3116	  10088	   2768	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:49:41 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+'Finished building: ../src/lab2b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6652	    308	   3120	  10080	   2760	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:50:00 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab2b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab2b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab2b.d" -MT"src/lab2b.o" -o "src/lab2b.o" "../src/lab2b.c"
+'Finished building: ../src/lab2b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab2b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6652	    308	   3120	  10080	   2760	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:50:40 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+22:52:56 **** Clean-only build of configuration Debug for project sbl_sw ****
+make clean 
+rm -rf  ./src/lab2b.o  ./src/lab2b.d  sbl_sw.elf.size  sbl_sw.elf
+' '
+
+****  of configuration Debug for project sbl_sw ****
+
+Nothing to build for project sbl_sw
+22:53:10 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:9:28: error: 'XPAR_SWB_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_SB_DEVICE_ID'?
+ #define GPIO_DEVICE_ID_SWB XPAR_SWB_DEVICE_ID
+                            ^
+../src/lab02b.c:36:25: note: in expansion of macro 'GPIO_DEVICE_ID_SWB'
+  XGpio_Initialize(&swb, GPIO_DEVICE_ID_SWB);
+                         ^~~~~~~~~~~~~~~~~~
+../src/lab02b.c:9:28: note: each undeclared identifier is reported only once for each function it appears in
+ #define GPIO_DEVICE_ID_SWB XPAR_SWB_DEVICE_ID
+                            ^
+../src/lab02b.c:36:25: note: in expansion of macro 'GPIO_DEVICE_ID_SWB'
+  XGpio_Initialize(&swb, GPIO_DEVICE_ID_SWB);
+                         ^~~~~~~~~~~~~~~~~~
+../src/lab02b.c:47:57: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   boolean button0 = (0x01 & XGpio_DiscreteRead(&swb, 1) == 0x01) //button 0 is currently pressed (overrides button 1 being pressed)
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+22:53:33 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c:9:0: warning: "XPAR_GPIO_1_DEVICE_ID" redefined
+ #define XPAR_GPIO_1_DEVICE_ID XPAR_SWB_DEVICE_ID
+ 
+In file included from ../src/lab02b.c:2:0:
+../../sbl_sw_bsp/microblaze_0/include/xparameters.h:582:0: note: this is the location of the previous definition
+ #define XPAR_GPIO_1_DEVICE_ID XPAR_SB_DEVICE_ID
+ 
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:30:36: error: 'GPIO_DEVICE_ID_LEDS' undeclared (first use in this function)
+  statuso = XGpio_Initialize(&leds, GPIO_DEVICE_ID_LEDS);
+                                    ^~~~~~~~~~~~~~~~~~~
+../src/lab02b.c:30:36: note: each undeclared identifier is reported only once for each function it appears in
+../src/lab02b.c:36:25: error: 'GPIO_DEVICE_ID_SWB' undeclared (first use in this function); did you mean 'GPIO_DEVICE_ID_LEDS'?
+  XGpio_Initialize(&swb, GPIO_DEVICE_ID_SWB);
+                         ^~~~~~~~~~~~~~~~~~
+                         GPIO_DEVICE_ID_LEDS
+../src/lab02b.c:47:57: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   boolean button0 = (0x01 & XGpio_DiscreteRead(&swb, 1) == 0x01) //button 0 is currently pressed (overrides button 1 being pressed)
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+22:53:47 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:30:36: error: 'GPIO_DEVICE_ID_LEDS' undeclared (first use in this function)
+  statuso = XGpio_Initialize(&leds, GPIO_DEVICE_ID_LEDS);
+                                    ^~~~~~~~~~~~~~~~~~~
+../src/lab02b.c:30:36: note: each undeclared identifier is reported only once for each function it appears in
+../src/lab02b.c:36:25: error: 'GPIO_DEVICE_ID_SWB' undeclared (first use in this function); did you mean 'GPIO_DEVICE_ID_LEDS'?
+  XGpio_Initialize(&swb, GPIO_DEVICE_ID_SWB);
+                         ^~~~~~~~~~~~~~~~~~
+                         GPIO_DEVICE_ID_LEDS
+../src/lab02b.c:47:57: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   boolean button0 = (0x01 & XGpio_DiscreteRead(&swb, 1) == 0x01) //button 0 is currently pressed (overrides button 1 being pressed)
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+22:54:05 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:47:57: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   boolean button0 = (0x01 & XGpio_DiscreteRead(&swb, 1) == 0x01) //button 0 is currently pressed (overrides button 1 being pressed)
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9316	    308	   3120	  12744	   31c8	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:54:20 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:46:57: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   boolean button0 = (0x01 & XGpio_DiscreteRead(&swb, 1) == 0x01) //button 0 is currently pressed (overrides button 1 being pressed)
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9316	    308	   3120	  12744	   31c8	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:54:24 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:46:57: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   boolean button0 = (0x01 & XGpio_DiscreteRead(&swb, 1) == 0x01) //button 0 is currently pressed (overrides button 1 being pressed)
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9316	    308	   3120	  12744	   31c8	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:54:57 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9320	    308	   3116	  12744	   31c8	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:55:15 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+22:55:34 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+22:58:03 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6652	    308	   3120	  10080	   2760	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:58:53 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6652	    308	   3120	  10080	   2760	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+22:59:16 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+22:59:55 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:60:6: error: 'get_bs' undeclared (first use in this function); did you mean 'getfsl'?
+      get_bs = XGpio_DiscreteRead(&sbs, 1);
+      ^~~~~~
+      getfsl
+../src/lab02b.c:60:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/lab02b.c:60:35: error: 'sbs' undeclared (first use in this function); did you mean 'sbr'?
+      get_bs = XGpio_DiscreteRead(&sbs, 1);
+                                   ^~~
+                                   sbr
+../src/lab02b.c:57:6: warning: unused variable 'switchValue' [-Wunused-variable]
+  int switchValue = 0;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+23:00:12 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:60:6: error: 'get_bs' undeclared (first use in this function); did you mean 'getfsl'?
+      get_bs = XGpio_DiscreteRead(&swb, 1);
+      ^~~~~~
+      getfsl
+../src/lab02b.c:60:6: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+23:01:28 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6636	    308	   3120	  10064	   2750	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:02:04 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:03:56 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6660	    308	   3120	  10088	   2768	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:04:02 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:06:00 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:06:07 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:07:24 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:07:31 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:07:49 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6608	    308	   3116	  10032	   2730	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:07:59 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:08:26 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:08:31 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:09:07 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:09:16 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:10:12 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:10:18 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:10:38 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:10:43 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:10:57 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:11:03 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:11:15 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:11:19 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:12:58 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:13:02 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:13:24 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:13:29 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:13:38 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6612	    308	   3120	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:13:43 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:14:42 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6644	    308	   3120	  10072	   2758	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:14:47 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:17:09 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:2: error: unknown type name 'Xuint32'; did you mean 'sint32'?
+  Xuint32  get_bs;
+  ^~~~~~~
+  sint32
+../src/lab02b.c:48:11: warning: unused variable 'get_bs' [-Wunused-variable]
+  Xuint32  get_bs;
+           ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+23:17:13 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6644	    308	   3120	  10072	   2758	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:18:08 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6636	    308	   3120	  10064	   2750	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:18:16 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:19:29 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:48:6: warning: unused variable 'get_bs' [-Wunused-variable]
+  u32 get_bs;
+      ^~~~~~
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6640	    308	   3116	  10064	   2750	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:19:36 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:20:00 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+../src/lab02b.c:62:7: warning: 'get_bs' may be used uninitialized in this function [-Wmaybe-uninitialized]
+       xil_printf("%d\n\r",get_bs);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6616	    308	   3116	  10040	   2738	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:20:09 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+../src/lab02b.c:62:7: warning: 'get_bs' may be used uninitialized in this function [-Wmaybe-uninitialized]
+       xil_printf("0x%h \n \r",get_bs);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6620	    308	   3120	  10048	   2740	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:20:23 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+../src/lab02b.c:62:7: warning: 'get_bs' may be used uninitialized in this function [-Wmaybe-uninitialized]
+       xil_printf("get_bs: 0b%b \n \r",get_bs);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6628	    308	   3120	  10056	   2748	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:20:28 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:44:6: warning: unused variable 'count_masked' [-Wunused-variable]
+  int count_masked = 0; //count_masked will always be between 0 and 15
+      ^~~~~~~~~~~~
+../src/lab02b.c:43:6: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  int count = 0; //actual count value (may be greater than 15)
+      ^~~~~
+../src/lab02b.c:61:6: warning: 'get_bs' is used uninitialized in this function [-Wuninitialized]
+      xil_printf("get_bs: 0b%b \n \r",get_bs);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6328	    308	   3116	   9752	   2618	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:20:37 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6704	    308	   3116	  10128	   2790	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:20:46 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:21:20 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6704	    308	   3116	  10128	   2790	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:21:22 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6704	    308	   3116	  10128	   2790	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:21:26 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:21:44 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6704	    308	   3116	  10128	   2790	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:21:47 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:22:04 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6704	    308	   3116	  10128	   2790	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:22:08 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:22:43 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6700	    308	   3120	  10128	   2790	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:22:49 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6636	    308	   3120	  10064	   2750	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:23:26 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6676	    308	   3120	  10104	   2778	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:23:37 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:24:33 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:63:31: error: unknown type name 'd'
+      if ((get_bs << 7) & 0x1){d
+                               ^
+../src/lab02b.c:64:27: error: expected declaration specifiers or '...' before '&' token
+       XGpio_DiscreteWrite(&leds, 1, count_masked);
+                           ^
+../src/lab02b.c:64:34: error: expected declaration specifiers or '...' before numeric constant
+       XGpio_DiscreteWrite(&leds, 1, count_masked);
+                                  ^
+../src/lab02b.c:64:37: error: expected declaration specifiers or '...' before 'count_masked'
+       XGpio_DiscreteWrite(&leds, 1, count_masked);
+                                     ^~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+23:24:35 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6676	    308	   3120	  10104	   2778	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:27:22 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6980	    308	   3120	  10408	   28a8	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:27:56 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6980	    308	   3120	  10408	   28a8	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:28:18 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6980	    308	   3120	  10408	   28a8	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:28:34 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6968	    308	   3116	  10392	   2898	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:28:39 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:29:00 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:79:6: error: 'd' undeclared (first use in this function)
+     }d
+      ^
+../src/lab02b.c:79:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/lab02b.c:80:5: error: expected ';' before 'return'
+     return (0);
+     ^~~~~~
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+23:29:18 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6676	    308	   3120	  10104	   2778	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:29:29 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:30:17 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6676	    308	   3120	  10104	   2778	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:30:21 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:30:36 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c:85:1: error: expected '=', ',', ';', 'asm' or '__attribute__' at end of input
+ }s
+ ^
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+23:31:57 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6940	    308	   3120	  10368	   2880	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:32:01 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:32:13 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:70:7: error: 's' undeclared (first use in this function); did you mean 's8'?
+      }s
+       ^
+       s8
+../src/lab02b.c:70:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/lab02b.c:71:6: error: expected ';' before 'else'
+      else if ((get_bs << 6) & 0x1){
+      ^~~~
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+23:32:33 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7392	    308	   3116	  10816	   2a40	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:32:37 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:33:27 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:87:6: error: 's' undeclared (first use in this function); did you mean 's8'?
+     }s
+      ^
+      s8
+../src/lab02b.c:87:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/lab02b.c:88:5: error: expected ';' before 'return'
+     return (0);
+     ^~~~~~
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+23:33:57 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:46:35: error: 'swb' undeclared (first use in this function); did you mean 'swr'?
+      get_bs = XGpio_DiscreteRead(&swb, 1);
+                                   ^~~
+                                   swr
+../src/lab02b.c:46:35: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+23:34:13 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:46:35: error: 'swb' undeclared (first use in this function); did you mean 'swr'?
+      get_bs = XGpio_DiscreteRead(&swb, 1);
+                                   ^~~
+                                   swr
+../src/lab02b.c:46:35: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+23:34:19 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7144	    308	   3116	  10568	   2948	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:34:34 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7104	    308	   3116	  10528	   2920	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:35:04 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:36:52 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7104	    308	   3116	  10528	   2920	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:37:49 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7128	    308	   3116	  10552	   2938	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:37:53 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:39:38 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7128	    308	   3116	  10552	   2938	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:41:34 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7284	    308	   3120	  10712	   29d8	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:41:37 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:43:39 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:44:18 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7248	    308	   3116	  10672	   29b0	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:44:28 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:45:01 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7264	    308	   3116	  10688	   29c0	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:46:07 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:64:11: error: 'getbs' undeclared (first use in this function); did you mean 'get_bs'?
+      if ((getbs >> 4) & 0xF){
+           ^~~~~
+           get_bs
+../src/lab02b.c:64:11: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+23:46:14 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7332	    308	   3120	  10760	   2a08	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:46:17 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:48:36 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:51:7: warning: statement with no effect [-Wunused-value]
+       switch_value
+       ^~~~~~~~~~~~
+../src/lab02b.c:52:7: error: expected ';' before 'XGpio_DiscreteWrite'
+       XGpio_DiscreteWrite(&leds, 1, (get_bs & 0xF));
+       ^~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+23:49:00 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:51:7: warning: statement with no effect [-Wunused-value]
+       switch_value
+       ^~~~~~~~~~~~
+../src/lab02b.c:52:7: error: expected ';' before 'XGpio_DiscreteWrite'
+       XGpio_DiscreteWrite(&leds, 1, (get_bs & 0xF));
+       ^~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/lab02b.o] Error 1
+23:49:20 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:51:7: warning: 'switch_value' may be used uninitialized in this function [-Wmaybe-uninitialized]
+       xil_printf("LEDs: %d\n\r", switch_value);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7356	    308	   3120	  10784	   2a20	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:49:32 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+../src/lab02b.c: In function 'main':
+../src/lab02b.c:22:9: warning: unused variable 'switch_value' [-Wunused-variable]
+     int switch_value;
+         ^~~~~~~~~~~~
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7364	    308	   3120	  10792	   2a28	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:49:36 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7364	    308	   3120	  10792	   2a28	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:49:45 **** Incremental Build of configuration Debug for project sbl_sw ****
+make all 
+make: Nothing to be done for 'all'.
+23:50:23 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7364	    308	   3120	  10792	   2a28	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:50:31 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7364	    308	   3120	  10792	   2a28	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '
+23:50:44 **** Auto Build of configuration Debug for project sbl_sw ****
+make all 
+'Building file: ../src/lab02b.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab02b.o" -I../../sbl_sw_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lab02b.d" -MT"src/lab02b.o" -o "src/lab02b.o" "../src/lab02b.c"
+'Finished building: ../src/lab02b.c'
+' '
+'Building target: sbl_sw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sbl_sw_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sbl_sw.elf"  ./src/lab02b.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sbl_sw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sbl_sw.elf  |tee "sbl_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7388	    308	   3120	  10816	   2a40	sbl_sw.elf
+'Finished building: sbl_sw.elf.size'
+' '

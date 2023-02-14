@@ -1,0 +1,70 @@
+#include <xparameters.h>
+#include <xgpio.h>
+#include <xstatus.h>
+#include <xil_printf.h>
+
+/* Definitions */
+#define GPIO_DEVICE_ID XPAR_LED_DEVICE_ID   /* GPIO device that LEDs are connected to */
+#define XPAR_GPIO_1_DEVICE_ID XPAR_SB_DEVICE_ID
+#define XPAR_GPIO_0_DEVICE_ID XPAR_LED_DEVICE_ID
+#define WAIT_VAL 0x1000000
+
+int delay(void);
+
+int main() {
+
+    int count;
+    int count_masked;
+    XGpio leds, sbs;
+    int led_status,  sb_status;
+    int get_bs;
+
+    led_status = XGpio_Initialize(&leds, XPAR_GPIO_0_DEVICE_ID);
+
+    sb_status = XGpio_Initialize(&sbs, XPAR_GPIO_1_DEVICE_ID);
+
+    XGpio_SetDataDirection(&leds, 1, 0x00);
+    XGpio_SetDataDirection(&sbs, 1, 1);
+
+    if(led_status != XST_SUCCESS) {
+        xil_printf("Initialization failed");    
+    }
+    if(sb_status != XST_SUCCESS) {
+        xil_printf("Initialization failed");
+    }
+
+    count = 0;
+    while(1) {
+    	get_bs = XGpio_DiscreteRead(&sbs, 2);
+    	count_masked = count & 0xF;
+
+    	if ((get_bs << 7) & 0x1){
+    		XGpio_DiscreteWrite(&leds, 1, count_masked);
+    		delay();
+    	}
+    	else if ((get_bs << 6) & 0x1){
+    		XGpio_DiscreteWrite(&leds, 1, (get_bs & 0xF));
+    		delay();
+    	}
+    	else if ((get_bs << 5) & 0x1){
+    		count--;
+    		XGpio_DiscreteWrite(&leds, 1, count_masked);
+    		delay();
+    	}
+    	else if ((get_bs << 4) & 0x1){
+    		count++;
+    		XGpio_DiscreteWrite(&leds, 1, count_masked);
+    		delay();
+    	}
+        delay();
+    }
+    return (0);
+}
+
+int delay(void) {
+    volatile int delay_count = 0;
+    while(delay_count < WAIT_VAL)
+        delay_count++;
+    return(0);
+}
+

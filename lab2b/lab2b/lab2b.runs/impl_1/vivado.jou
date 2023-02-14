@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Feb 13 22:42:00 2023
+# Process ID: 16832
+# Current directory: C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/impl_1
+# Command line: vivado.exe -log sbl_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source sbl_wrapper.tcl -notrace
+# Log file: C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/impl_1/sbl_wrapper.vdi
+# Journal file: C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source sbl_wrapper.tcl -notrace

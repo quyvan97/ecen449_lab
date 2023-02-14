@@ -1,0 +1,74 @@
+#include <xparameters.h>
+#include <xgpio.h>
+#include <xstatus.h>
+#include <xil_printf.h>
+
+//Definitions
+#define XPAR_GPIO_0_DEVICE_ID XPAR_LED_DEVICE_ID //device IDs
+#define XPAR_GPIO_1_DEVICE_ID XPAR_SB_DEVICE_ID
+#define WAIT_VAL 10000000 //100 MHz clock input (we need to divide it by 10 mil to get 1 Hz)
+
+int delay(void) {
+    volatile int delay_count = 0;
+    while(delay_count < WAIT_VAL)
+        delay_count++;
+    return(0);
+}
+
+int main() {
+
+    int count;
+    int count_masked;
+    XGpio leds, sbs;
+    int led_status,  sb_status;
+    int get_bs;
+
+    led_status = XGpio_Initialize(&leds, XPAR_GPIO_0_DEVICE_ID);
+
+    sb_status = XGpio_Initialize(&sbs, XPAR_GPIO_1_DEVICE_ID);
+
+    XGpio_SetDataDirection(&leds, 1, 0x00);
+    XGpio_SetDataDirection(&sbs, 1, 1);
+
+    if(led_status != XST_SUCCESS) {
+        xil_printf("Initialization failed");
+    }
+    if(sb_status != XST_SUCCESS) {
+        xil_printf("Initialization failed");
+    }
+
+    count = 0;
+    while(1) {
+    	get_bs = XGpio_DiscreteRead(&sbs, 1);
+    	if ((get_bs >> 7) & 0x1){
+    		xil_printf("Button 3 is pushed\n\r");
+    		count_masked = count & 0xF;
+    		XGpio_DiscreteWrite(&leds, 1, count_masked);
+    	}
+    	else if ((get_bs >> 6) & 0x1){
+    		xil_printf("Button 2 is pushed\n\r");
+    		XGpio_DiscreteWrite(&leds, 1, (get_bs & 0xF));
+    		xil_printf("Switches --> LEDs: %d\n\r", get_bs & 0xF);
+    	}
+    	else if ((get_bs >> 5) & 0x1){
+    		xil_printf("Button 1 is pushed\n\r");
+    		count--;
+    		count_masked = count & 0xF;
+    		XGpio_DiscreteWrite(&leds, 1, count_masked);
+    	}
+    	else if ((get_bs >> 4) & 0x1){
+    		xil_printf("Button 0 is pushed\n\r");
+    		count++;
+    		count_masked = count & 0xF;
+    		XGpio_DiscreteWrite(&leds, 1, count_masked);
+    	}
+    	if ((get_bs >> 4) & 0b1011){
+    		xil_printf("LEDs: %d\n\r", count_masked);
+    	}
+    	delay();
+    }
+    return (0);
+}
+
+
+

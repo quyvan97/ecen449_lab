@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="sbl_wrapper.bit" key="sbl_wrapper_hw_platform_0-bitFile"/>
+	<item value="false" key="sbl_wrapper_hw_platform_0-partial_bit"/>
+	<item value="bootloop" key="sbl_wrapper_hw_platform_0-microblaze_0-initElf"/>
+	<item value="sbl_wrapper.mmi" key="sbl_wrapper_hw_platform_0-bmmFile"/>
+	<item value="sbl_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="Auto Detect" key="sbl_wrapper_hw_platform_0-device"/>
+	<item value="Local" key="sbl_wrapper_hw_platform_0-target"/>
+</section>

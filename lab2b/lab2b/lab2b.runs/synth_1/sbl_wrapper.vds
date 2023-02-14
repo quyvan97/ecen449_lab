@@ -1,0 +1,431 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Feb 13 22:41:37 2023
+# Process ID: 16048
+# Current directory: C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1
+# Command line: vivado.exe -log sbl_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sbl_wrapper.tcl
+# Log file: C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/sbl_wrapper.vds
+# Journal file: C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source sbl_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top sbl_wrapper -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 24292 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 391.332 ; gain = 105.160
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sbl_wrapper' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/hdl/sbl_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'sbl' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:789]
+INFO: [Synth 8-6157] synthesizing module 'sbl_xlconstant_1_0' [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_xlconstant_1_0/synth/sbl_xlconstant_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_5_xlconstant' [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 0 - type: integer 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant' (1#1) [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_xlconstant_1_0' (2#1) [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_xlconstant_1_0/synth/sbl_xlconstant_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'sbl_xlconstant_0_0' [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_xlconstant_0_0/synth/sbl_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_5_xlconstant__parameterized0' [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 1 - type: integer 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant__parameterized0' (2#1) [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_xlconstant_0_0' (3#1) [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_xlconstant_0_0/synth/sbl_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'sbl_clk_wiz_1_0' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_clk_wiz_1_0' (4#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'sbl_axi_gpio_0_0' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_axi_gpio_0_0' (5#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sbl_mdm_1_0' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_mdm_1_0' (6#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_mdm_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'mdm_1' of module 'sbl_mdm_1_0' requires 30 connections, but only 29 given [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:940]
+INFO: [Synth 8-6157] synthesizing module 'sbl_microblaze_0_0' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_microblaze_0_0' (7#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_microblaze_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'microblaze_0' of module 'sbl_microblaze_0_0' requires 52 connections, but only 51 given [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:972]
+INFO: [Synth 8-6157] synthesizing module 'sbl_microblaze_0_axi_periph_0' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:1159]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1528CDT' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1528CDT' (8#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:12]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_LRBL84' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_LRBL84' (9#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:144]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1VLKK56' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:276]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1VLKK56' (10#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:276]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_GCL9XN' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:642]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_GCL9XN' (11#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:642]
+INFO: [Synth 8-6157] synthesizing module 'sbl_xbar_0' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_xbar_0' (12#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_xbar_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'xbar' of module 'sbl_xbar_0' requires 40 connections, but only 38 given [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:1696]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_microblaze_0_axi_periph_0' (13#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:1159]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_YDXMTV' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:408]
+INFO: [Synth 8-6157] synthesizing module 'sbl_dlmb_bram_if_cntlr_0' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_dlmb_bram_if_cntlr_0' (14#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sbl_dlmb_v10_0' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_dlmb_v10_0' (15#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'sbl_dlmb_v10_0' requires 25 connections, but only 24 given [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:554]
+INFO: [Synth 8-6157] synthesizing module 'sbl_ilmb_bram_if_cntlr_0' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_ilmb_bram_if_cntlr_0' (16#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sbl_ilmb_v10_0' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_ilmb_v10_0' (17#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'sbl_ilmb_v10_0' requires 25 connections, but only 24 given [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:600]
+INFO: [Synth 8-6157] synthesizing module 'sbl_lmb_bram_0' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_lmb_bram_0' (18#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_lmb_bram_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'lmb_bram' of module 'sbl_lmb_bram_0' requires 16 connections, but only 14 given [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:625]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_YDXMTV' (19#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:408]
+INFO: [Synth 8-6157] synthesizing module 'sbl_rst_clk_wiz_1_100M_0' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_rst_clk_wiz_1_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_rst_clk_wiz_1_100M_0' (20#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_rst_clk_wiz_1_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_clk_wiz_1_100M' of module 'sbl_rst_clk_wiz_1_100M_0' requires 10 connections, but only 8 given [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:1127]
+INFO: [Synth 8-6157] synthesizing module 'sbl_axi_gpio_0_1' [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_axi_gpio_0_1' (21#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/.Xil/Vivado-16048-DESKTOP-O42HKUL/realtime/sbl_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sbl' (22#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/synth/sbl.v:789]
+INFO: [Synth 8-6155] done synthesizing module 'sbl_wrapper' (23#1) [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/hdl/sbl_wrapper.v:12]
+WARNING: [Synth 8-3331] design s00_couplers_imp_GCL9XN has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_GCL9XN has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_GCL9XN has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_GCL9XN has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_1VLKK56 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_1VLKK56 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_1VLKK56 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_1VLKK56 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_LRBL84 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_LRBL84 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_LRBL84 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_LRBL84 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_1528CDT has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_1528CDT has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_1528CDT has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_1528CDT has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 447.246 ; gain = 161.074
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 447.246 ; gain = 161.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 447.246 ; gain = 161.074
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_microblaze_0_0/sbl_microblaze_0_0/sbl_microblaze_0_0_in_context.xdc] for cell 'sbl_i/microblaze_0'
+Finished Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_microblaze_0_0/sbl_microblaze_0_0/sbl_microblaze_0_0_in_context.xdc] for cell 'sbl_i/microblaze_0'
+Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_dlmb_v10_0/sbl_dlmb_v10_0/sbl_dlmb_v10_0_in_context.xdc] for cell 'sbl_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_dlmb_v10_0/sbl_dlmb_v10_0/sbl_dlmb_v10_0_in_context.xdc] for cell 'sbl_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_ilmb_v10_0/sbl_ilmb_v10_0/sbl_dlmb_v10_0_in_context.xdc] for cell 'sbl_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_ilmb_v10_0/sbl_ilmb_v10_0/sbl_dlmb_v10_0_in_context.xdc] for cell 'sbl_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_dlmb_bram_if_cntlr_0/sbl_dlmb_bram_if_cntlr_0/sbl_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'sbl_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_dlmb_bram_if_cntlr_0/sbl_dlmb_bram_if_cntlr_0/sbl_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'sbl_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_ilmb_bram_if_cntlr_0/sbl_ilmb_bram_if_cntlr_0/sbl_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'sbl_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_ilmb_bram_if_cntlr_0/sbl_ilmb_bram_if_cntlr_0/sbl_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'sbl_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_lmb_bram_0/sbl_lmb_bram_0/sbl_lmb_bram_0_in_context.xdc] for cell 'sbl_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_lmb_bram_0/sbl_lmb_bram_0/sbl_lmb_bram_0_in_context.xdc] for cell 'sbl_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_xbar_0/sbl_xbar_0/sbl_xbar_0_in_context.xdc] for cell 'sbl_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_xbar_0/sbl_xbar_0/sbl_xbar_0_in_context.xdc] for cell 'sbl_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_mdm_1_0/sbl_mdm_1_0/sbl_mdm_1_0_in_context.xdc] for cell 'sbl_i/mdm_1'
+Finished Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_mdm_1_0/sbl_mdm_1_0/sbl_mdm_1_0_in_context.xdc] for cell 'sbl_i/mdm_1'
+Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_clk_wiz_1_0/sbl_clk_wiz_1_0/sbl_clk_wiz_1_0_in_context.xdc] for cell 'sbl_i/clk_wiz_1'
+Finished Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_clk_wiz_1_0/sbl_clk_wiz_1_0/sbl_clk_wiz_1_0_in_context.xdc] for cell 'sbl_i/clk_wiz_1'
+Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_rst_clk_wiz_1_100M_0/sbl_rst_clk_wiz_1_100M_0/sbl_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'sbl_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_rst_clk_wiz_1_100M_0/sbl_rst_clk_wiz_1_100M_0/sbl_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'sbl_i/rst_clk_wiz_1_100M'
+Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_axi_gpio_0_0/sbl_axi_gpio_0_0/sbl_axi_gpio_0_0_in_context.xdc] for cell 'sbl_i/led'
+Finished Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_axi_gpio_0_0/sbl_axi_gpio_0_0/sbl_axi_gpio_0_0_in_context.xdc] for cell 'sbl_i/led'
+Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_axi_gpio_0_1/sbl_axi_gpio_0_1/sbl_axi_gpio_0_1_in_context.xdc] for cell 'sbl_i/sb'
+Finished Parsing XDC File [c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_axi_gpio_0_1/sbl_axi_gpio_0_1/sbl_axi_gpio_0_1_in_context.xdc] for cell 'sbl_i/sb'
+Parsing XDC File [C:/Users/quyvan/Desktop/lab2b/lab2b/sbl.xdc]
+Finished Parsing XDC File [C:/Users/quyvan/Desktop/lab2b/lab2b/sbl.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/quyvan/Desktop/lab2b/lab2b/sbl.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/sbl_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/sbl_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/dont_touch.xdc]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 752.086 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 752.086 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 752.086 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 752.086 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'sbl_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 752.086 ; gain = 465.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 752.086 ; gain = 465.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_clk_wiz_1_0/sbl_clk_wiz_1_0/sbl_clk_wiz_1_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  c:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.srcs/sources_1/bd/sbl/ip/sbl_clk_wiz_1_0/sbl_clk_wiz_1_0/sbl_clk_wiz_1_0_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for sbl_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/microblaze_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/microblaze_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/mdm_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/clk_wiz_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/led. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/VDD. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/GND. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for sbl_i/sb. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 752.086 ; gain = 465.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 752.086 ; gain = 465.914
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design sbl_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 752.086 ; gain = 465.914
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'sbl_i/microblaze_0_local_memory/dlmb_bram_if_cntlr/BRAM_Clk_A' to pin 'sbl_i/microblaze_0_local_memory/dlmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'sbl_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/BRAM_Clk_A' to pin 'sbl_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'sbl_i/mdm_1/Dbg_Clk_0' to pin 'sbl_i/mdm_1/bbstub_Dbg_Clk_0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'sbl_i/mdm_1/Dbg_Update_0' to pin 'sbl_i/mdm_1/bbstub_Dbg_Update_0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'sbl_i/clk_wiz_1/clk_out1' to pin 'sbl_i/clk_wiz_1/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 5 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 770.285 ; gain = 484.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 770.434 ; gain = 484.262
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 780.434 ; gain = 494.262
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 780.434 ; gain = 494.262
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 780.434 ; gain = 494.262
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 780.434 ; gain = 494.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 780.434 ; gain = 494.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 780.434 ; gain = 494.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 780.434 ; gain = 494.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------+----------+
+|      |BlackBox name            |Instances |
++------+-------------------------+----------+
+|1     |sbl_xbar_0               |         1|
+|2     |sbl_clk_wiz_1_0          |         1|
+|3     |sbl_axi_gpio_0_0         |         1|
+|4     |sbl_mdm_1_0              |         1|
+|5     |sbl_microblaze_0_0       |         1|
+|6     |sbl_rst_clk_wiz_1_100M_0 |         1|
+|7     |sbl_axi_gpio_0_1         |         1|
+|8     |sbl_dlmb_bram_if_cntlr_0 |         1|
+|9     |sbl_dlmb_v10_0           |         1|
+|10    |sbl_ilmb_bram_if_cntlr_0 |         1|
+|11    |sbl_ilmb_v10_0           |         1|
+|12    |sbl_lmb_bram_0           |         1|
++------+-------------------------+----------+
+
+Report Cell Usage: 
++------+-------------------------+------+
+|      |Cell                     |Count |
++------+-------------------------+------+
+|1     |sbl_axi_gpio_0_0         |     1|
+|2     |sbl_axi_gpio_0_1         |     1|
+|3     |sbl_clk_wiz_1_0          |     1|
+|4     |sbl_dlmb_bram_if_cntlr_0 |     1|
+|5     |sbl_dlmb_v10_0           |     1|
+|6     |sbl_ilmb_bram_if_cntlr_0 |     1|
+|7     |sbl_ilmb_v10_0           |     1|
+|8     |sbl_lmb_bram_0           |     1|
+|9     |sbl_mdm_1_0              |     1|
+|10    |sbl_microblaze_0_0       |     1|
+|11    |sbl_rst_clk_wiz_1_100M_0 |     1|
+|12    |sbl_xbar_0               |     1|
+|13    |IBUF                     |     8|
+|14    |OBUF                     |     4|
++------+-------------------------+------+
+
+Report Instance Areas: 
++------+------------------------------+-------------------------------------+------+
+|      |Instance                      |Module                               |Cells |
++------+------------------------------+-------------------------------------+------+
+|1     |top                           |                                     |  1252|
+|2     |  sbl_i                       |sbl                                  |  1240|
+|3     |    GND                       |sbl_xlconstant_1_0                   |     0|
+|4     |    VDD                       |sbl_xlconstant_0_0                   |     0|
+|5     |    microblaze_0_axi_periph   |sbl_microblaze_0_axi_periph_0        |   374|
+|6     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_YDXMTV |   496|
++------+------------------------------+-------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 780.434 ; gain = 494.262
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 780.434 ; gain = 189.422
+Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 780.434 ; gain = 494.262
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 791.512 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+67 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 791.512 ; gain = 510.684
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 791.512 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/quyvan/Desktop/lab2b/lab2b/lab2b.runs/synth_1/sbl_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file sbl_wrapper_utilization_synth.rpt -pb sbl_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 13 22:41:53 2023...
